@@ -39,6 +39,15 @@
 			border-radius: 5px;
 		}
 
+		.footer {
+			text-align: center;
+			font-size: 0.8rem;
+			margin: 2.5rem auto;
+		}
+		.footer>a{
+			color: #888;
+		}
+
 		/* Responsive styles */
 		@media (max-width: 768px) {
 			.cta-button {
@@ -47,22 +56,25 @@
 			}
 		}
 	</style>
+	<script>
+		const memes = ['1.jpg','2.png','3.png','4.jpg']
+		var current = 2
+		function rotate(){
+			current = (current + 1) % 4
+			document.getElementById("meme").src = "memes/"+memes[current]
+		}
+	</script>
 </head>
 <body>
 	<main>
-		<img id="meme" class="main-image" src="memes/3.png" alt="Why not drs?">
+		<img id="meme" class="main-image" src="memes/3.png" alt="Why not drs? meme">
 		<div class="call-to-action">
 			<a class="cta-button" href="#" onclick="rotate()">Why not DRS?</a>
 			<a class="cta-button" href="https://www.whydrs.org/">Why DRS!</a>
 		</div>
+		<div class="footer">
+			<a href="https://lemmy.whynotdrs.org/">Come chat with us!</a>
+		</div>
 	</main>
 </body>
-<script>
-	const memes = ['1.jpg','2.png','3.png','4.jpg']
-	var current = 2
-	function rotate(){
-		current = (current + 1) % 4
-		document.getElementById("meme").src = "memes/"+memes[current]
-	}
-</script>
 </html>
