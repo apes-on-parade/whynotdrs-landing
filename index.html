@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Your Landing Page</title>
+	<link rel="canonical" href="https://www.whynotdrs.org/">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			line-height: 1.6;
+			margin: 0;
+			padding: 0;
+		}
+
+		main {
+			padding: 1rem;
+			text-align: center;
+		}
+		.main-image {
+			max-width: 100%;
+			height: auto;
+			display: block;
+			margin: 0 auto;
+		}
+
+		.call-to-action {
+			margin-top: 1rem;
+		}
+
+
+		.cta-button {
+			display: inline-block;
+			padding: 1rem 2rem;
+			background-color: rgb(20, 79, 155);
+			color: #fff;
+			text-decoration: none;
+			margin: 0 10px;
+			border-radius: 5px;
+		}
+
+		/* Responsive styles */
+		@media (max-width: 768px) {
+			.cta-button {
+				display: block;
+				margin: 10px auto;
+			}
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<img id="meme" class="main-image" src="memes/3.png" alt="Why not drs?">
+		<div class="call-to-action">
+			<a class="cta-button" href="#" onclick="rotate()">Why not DRS?</a>
+			<a class="cta-button" href="https://www.whydrs.org/">Why DRS!</a>
+		</div>
+	</main>
+</body>
+<script>
+	const memes = ['1.jpg','2.png','3.png','4.jpg']
+	var current = 2
+	function rotate(){
+		current = (current + 1) % 4
+		document.getElementById("meme").src = "memes/"+memes[current]
+	}
+</script>
+</html>
